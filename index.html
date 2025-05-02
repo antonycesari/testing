@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Avv. Alessio Ranieri - GDPR Specialist</title>
+  <meta name="description" content="GDPR Specialist">
+  <!-- questo blocco è per il SEO -->
+  <meta name="keywords" content="GDPR, roma, lazio">
+  <meta name="author" content="AlessioRanieri">
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://antonycesari.github.io/testing" />
+  <!-- fine blocco per il SEO -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    .hero {
+      background: url('images/istockphoto-1400359666-612x612.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 100px 0;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      /* position: relative; */
+      /* height: 100vh; */ /* Imposta l'altezza della sezione a 100% dell'altezza del viewport */
+    }
+    
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 20px 0;
+    }
+    
+    
+     @keyframes moveUp {
+       0% {
+         transform: translateY(0);
+       }
+       20% {
+         transform: translateY(-8px);
+       }
+       40% {
+         transform: translateY(-16px);
+       }
+       60% {
+         transform: translateY(-24px);
+       }
+       80% {
+         transform: translateY(-32px);
+       }
+       100% {
+         transform: translateY(-40px);
+       }
+     }
+
+     .hero h1, .hero p, .hero h2 {
+       margin-top: 20px;
+       transition: transform 0.4s ease-in-out;
+       will-change: transform;
+     }
+
+    
+    .animate {
+      animation: moveUp 10s ease-in-out infinite;
+    }
+
+    .logo-img {
+      height: 80px; /* o la misura che preferisci */
+      width: auto;
+    }
+
+    /* Per il campo MAIL. Spaziatura più armoniosa */
+#contactForm .form-label {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+#contactForm .form-control,
+#contactForm .form-select {
+  border-radius: 0.375rem;
+}
+
+#contactForm .form-check-label a {
+  text-decoration: underline;
+  color: #0d6efd; /* Colore Bootstrap primary */
+}
+
+#contactForm .form-check-label a:hover {
+  color: #0b5ed7;
+}
+
+/* Checkbox ben visibile e distanziata */
+#contactForm .form-check {
+  padding-left: 1.25em;
+}
+
+/* Thank you message visibile con transizione */
+#thankYouMessage {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Mobile friendly */
+@media (max-width: 576px) {
+  #contactForm .form-label,
+  #contactForm .form-check-label {
+    font-size: 0.95rem;
+  }
+
+  #submitBtn {
+    width: 100%;
+  }
+}
+
+.hover-shadow {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.35); /* ombra più grande e scura */
+  transform: translateY(-6px); /* solleva la card */
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/logo-temp.PNG" alt="Logo Alessio Ranieri" class="logo-img animate__animated animate__fadeInLeft me-2">
+      <div class="text-center">
+        <div class="animate__animated animate__fadeIn animate__delay-1s">
+          <span class="lead d-block"><strong>Avv.</strong></span>
+        </div>
+        <div class="animate__animated animate__fadeIn animate__delay-2s">
+          <span class="lead d-block"><strong>Alessio Ranieri</strong></span>
+        </div>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#chi-sono">Biografia</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servizi">Servizi</a></li>
+		<li class="nav-item"><a class="nav-link" href="#FAQ">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Hero Section -->
+  <header class="hero text-center"> 
+    <div class="container" style="margin-top: 140px;">
+      <h1 class="display-4"><strong>Avv. Alessio Ranieri</strong></h1>
+      <h2 class="lead"><strong>Specializzato in Privacy e GDPR</strong></h2>
+    </div>
+  </header>
+
+  <!-- Biografia Section -->
+  <section id="chi-sono" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center"><i class="bi bi-people-fill"></i> Biografia</h2>
+      <p class="text-center"><strong>Alessio</strong> è un professionista...</p>
+    </div>
+  </section>
+
+  <!-- Servizi -->
+<section id="servizi" class="py-5" style="background-color: #f0f0f0;">
+  <div class="container">
+    <h2 class="mb-5 text-center style="font-size: 2.5rem;">I nostri servizi</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      
+      <!-- Servizio -->
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0 hover-shadow">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-droplet-half me-2"></i>PROTEZIONE DEI DATI PERSONALI – PRIVACY</h5>
+            <p class="card-text">La tutela dei dati personali è diventato un tema di fondamentale importanza per tutte le attività commerciali, professionali e associative.Tramite un’attenta analisi fornisco al cliente gli elementi per acquisire consapevolezza, identificare e prevenire i rischi al fine di tutelare la propria attività.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0 hover-shadow">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-building me-2"></i>DATA PROTECTION OFFICER – DPO</h5>
+            <p class="card-text">Il ruolo del Data Protection Officer (Responsabile per la Protezione dei Dati – cd. DPO o RPD) è una figura cruciale per talune tipologie di enti ed aziende. Questa risorsa ha dei compiti ben precisi definiti dalla legge. La competenza specialistica mi consente di assumere questo incarico o di supportare il team aziendale in modo efficace e continuativo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm border-0 hover-shadow">
+          <div class="card-body">
+            <h5 class="card-title"><i class="bi bi-brush me-2"></i>AUDIT E GESTIONE CONTINUATIVA DEGLI ADEMPIMENTI PRIVACY</h5>
+            <p class="card-text">L’attività di audit e di gestione nel tempo degli adempimenti privacy è uno strumento importante che il titolare può utilizzare per un miglioramento continuo del proprio business. L’attività che posso svolgere riguarda audit periodici sia presso l’azienda sia presso i fornitori al fine di garantire il mantenimento e l’aggiornamento degli adempimenti e delle misure di sicurezza privacy e consulenza mirata.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+  <!-- Contatti -->
+  <section id="contatti" class="py-5" style="background-color: #f0f0f0;">
+    <div class="container">
+      <h2 class="mb-4">Contatti</h2>
+      <p><strong>Email:</strong> propria_casella@mail.com</p>
+      <p><strong>Telefono:</strong> +39 333 1111111</p>
+      <p><strong>Indirizzo:</strong> Via Indirizzo, 00100 Roma</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>Avv. Alessio Ranieri. Informativa Privacy. Questo sito utilizza solo cookie tecnici, come indicato nell’Informativa Cookie. Termini e Condizioni d’Uso.</p>
+    </div>
+  </footer>
+
+
+  <!-- Pulsante Email Flottante -->
+  <div class="email-float" data-bs-toggle="modal" data-bs-target="#emailModal" aria-label="Contattaci via Email">
+    <i class="bi bi-at" style="font-size: 1.6rem; color: white;"></i>
+  </div>
+
+  <!-- Modale Email con Formspree -->
+<div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="emailModalLabel">Contattaci via Email</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+      </div>
+      <div class="modal-body">
+        <form id="contactForm" action="https://formspree.io/f/xjkwvbpg" method="POST">
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="oggetto" class="form-label">Oggetto</label>
+            <input type="text" class="form-control" id="oggetto" name="_subject">
+          </div>
+          <div class="mb-3">
+            <label for="messaggio" class="form-label">Messaggio</label>
+            <textarea class="form-control" id="messaggio" name="messaggio" rows="4" required></textarea>
+          </div>
+
+          <!-- Honeypot invisibile -->
+          <input type="text" name="_gotcha" style="display:none">
+
+          <!-- Checkbox privacy -->
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" value="" id="privacyCheck" required>
+            <label class="form-check-label" for="privacyCheck">
+              Ho letto e compreso <a href="privacy-policy.html" target="_blank">l’informativa privacy</a>
+            </label>
+          </div>
+
+          <!-- Bottone disabilitato fino a che non si spunta la privacy -->
+          <button type="submit" id="submitBtn" class="btn btn-primary" disabled>Invia</button>
+        </form>
+
+        <div id="thankYouMessage" class="alert alert-success mt-3 d-none">
+          Grazie! Il tuo messaggio è stato inviato.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+  window.addEventListener('scroll', function () {
+    const heroText = document.querySelector('.hero h1');
+    <!-- qui sotto era hero p -->
+    const heroSubText = document.querySelector('.hero h2');
+    const scroll = window.scrollY;
+  
+    heroText.style.transform = `translateY(${Math.min(-scroll / 5, -20)}px)`;
+    heroSubText.style.transform = `translateY(${Math.min(-scroll / 5, -20)}px)`;
+  });
+    
+  <!-- inizio secondo script per mostrare il messaggio di conferma -->
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const thankYou = document.getElementById('thankYouMessage');
+
+    // Se la checkbox non è selezionata, blocca l'invio
+    if (!form.elements['privacyCheck'].checked) {
+      alert("Per favore accetta l'informativa sulla privacy per procedere.");
+      return;
+    }
+
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        form.classList.add('d-none');
+        thankYou.classList.remove('d-none');
+
+        // Reset del form dopo invio
+        form.reset();
+
+        // Dopo qualche secondo, reset anche della visibilità per eventuale nuovo invio
+        setTimeout(() => {
+          thankYou.classList.add('d-none');
+          form.classList.remove('d-none');
+        }, 7000); // 7 secondi visibilità messaggio
+      } else {
+        alert("Errore nell'invio del messaggio. Riprova più tardi.");
+      }
+    }).catch(error => {
+      alert("Errore di rete. Riprova più tardi.");
+    });
+  });
+
+   // Abilita il pulsante solo se la checkbox è spuntata
+  const privacyCheckbox = document.getElementById('privacyCheck');
+  const submitBtn = document.getElementById('submitBtn');
+
+  privacyCheckbox.addEventListener('change', function () {
+    submitBtn.disabled = !this.checked;
+  });
+    
+  </script>
+
+
+</body>
+</html>

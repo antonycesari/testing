@@ -12,30 +12,87 @@
       color: #333;
     }
 
+    /* HEADER & NAVBAR */
     header {
-      background-color: #0a0a0a;
+      background-color: #f9f9f9;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 1px solid #ddd;
+      position: relative;
     }
 
     header h1 {
-      color: #fff;
+      color: #222;
       font-size: 1.5rem;
     }
 
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
     nav a {
-      color: #fff;
+      color: #222;
       text-decoration: none;
-      margin-left: 1rem;
       font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: #007BFF;
+      transition: width 0.3s ease;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #007BFF;
     }
 
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* HAMBURGER MENU */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #222;
+      margin: 4px 0;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      position: absolute;
+      top: 60px;
+      right: 2rem;
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      z-index: 1000;
+    }
+
+    .mobile-menu a {
+      color: #222;
+    }
+
+    /* HERO SECTION */
     .hero {
       position: relative;
       text-align: center;
@@ -67,6 +124,7 @@
       margin: 0;
     }
 
+    /* SECTIONS */
     section {
       padding: 3rem 2rem;
       max-width: 900px;
@@ -80,17 +138,46 @@
       font-size: 0.9rem;
       color: #666;
     }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: none;
+      }
+
+      .mobile-menu.active {
+        display: flex;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>Avv. Mario Rossi</h1>
-    <nav>
-      <a href="#chi-sono">Chi sono</a>
+    <nav class="desktop-menu">
+      <a href="#biografia">Biografia</a>
       <a href="#servizi">Servizi</a>
       <a href="#contatti">Contatti</a>
     </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#biografia" onclick="toggleMenu()">Biografia</a>
+      <a href="#servizi" onclick="toggleMenu()">Servizi</a>
+      <a href="#contatti" onclick="toggleMenu()">Contatti</a>
+    </div>
   </header>
 
   <section class="hero">
@@ -101,8 +188,8 @@
     </div>
   </section>
 
-  <section id="chi-sono">
-    <h2>Chi sono</h2>
+  <section id="biografia">
+    <h2>Biografia</h2>
     <p>Mi chiamo Mario Rossi, sono un avvocato con oltre 10 anni di esperienza nella consulenza legale in ambito privacy e trattamento dei dati personali. Mi occupo di supportare aziende e professionisti nell’adeguamento al GDPR.</p>
   </section>
 
@@ -126,6 +213,13 @@
   <footer>
     © 2025 Avv. Mario Rossi - Tutti i diritti riservati
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>
